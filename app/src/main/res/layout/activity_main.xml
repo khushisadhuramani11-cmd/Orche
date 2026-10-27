@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/orche_ivory">
+
+    <!-- Dynamic Screen Container -->
+    <FrameLayout
+        android:id="@+id/screenHost"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Persistent Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/globalBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_bottom_nav"
+        android:elevation="8dp"
+        android:gravity="center_vertical">
+
+        <!-- Tab 0: Home -->
+        <LinearLayout
+            android:id="@+id/tabHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:id="@+id/tabHomeIcon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_home"
+                app:tint="@color/orche_plum" />
+            <TextView
+                android:id="@+id/tabHomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Home"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="@color/orche_plum" />
+        </LinearLayout>
+
+        <!-- Tab 1: Explore / Catalog -->
+        <LinearLayout
+            android:id="@+id/tabExplore"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:id="@+id/tabExploreIcon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_explore"
+                app:tint="@color/orche_muted" />
+            <TextView
+                android:id="@+id/tabExploreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Explore"
+                android:textSize="10sp"
+                android:textColor="@color/orche_muted" />
+        </LinearLayout>
+
+        <!-- Tab 2: In-Store (McDonald's Omnichannel feature) -->
+        <LinearLayout
+            android:id="@+id/tabInStore"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:id="@+id/tabInStoreIcon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_qr_scan"
+                app:tint="@color/orche_muted" />
+            <TextView
+                android:id="@+id/tabInStoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="In-Store"
+                android:textSize="10sp"
+                android:textColor="@color/orche_muted" />
+        </LinearLayout>
+
+        <!-- Tab 3: Saved / Wishlist -->
+        <LinearLayout
+            android:id="@+id/tabSaved"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:id="@+id/tabSavedIcon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_heart"
+                app:tint="@color/orche_muted" />
+            <TextView
+                android:id="@+id/tabSavedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Saved"
+                android:textSize="10sp"
+                android:textColor="@color/orche_muted" />
+        </LinearLayout>
+
+        <!-- Tab 4: Bag / Cart with Badge -->
+        <FrameLayout
+            android:id="@+id/tabBag"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/tabBagIcon"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_bag"
+                    app:tint="@color/orche_muted" />
+                <TextView
+                    android:id="@+id/tabBagText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Bag"
+                    android:textSize="10sp"
+                    android:textColor="@color/orche_muted" />
+            </LinearLayout>
+            <!-- Cart Badge -->
+            <TextView
+                android:id="@+id/tabCartBadge"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_badge"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/orche_white"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

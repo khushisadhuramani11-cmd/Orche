@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Rounded card background -->
+    <path
+        android:fillColor="#F6DCE2"
+        android:pathData="M16,0h88a16,16 0 0,1 16,16v88a16,16 0 0,1 -16,16h-88a16,16 0 0,1 -16,-16v-88a16,16 0 0,1 16,-16z"/>
+    <!-- Elegant brief silhouette -->
+    <path
+        android:fillColor="#C48493"
+        android:pathData="M30,42h60c-2,14 -10,36 -30,36s-28,-22 -30,-36z"/>
+</vector>

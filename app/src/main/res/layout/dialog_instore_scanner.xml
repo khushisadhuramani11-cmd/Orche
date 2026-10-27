@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/card_background"
+    android:padding="20dp">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_cormorant"
+            android:text="In-Store Scanner"
+            android:textColor="@color/orche_plum"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnCloseScanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="4dp"
+            android:text="✕"
+            android:textColor="@color/orche_muted"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:focusable="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Point camera at any garment barcode or select a rack sample below."
+        android:textColor="@color/orche_muted"
+        android:textSize="11sp" />
+
+    <!-- Viewfinder View Mockup -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_chip_selected">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_qr_scan"
+                app:tint="@color/orche_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Scanning Bandra Boutique Inventory..."
+                android:textColor="@color/orche_white"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Sample In-Store Barcodes to simulate scan -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="TAP A SAMPLE GARMENT TAG TO SCAN:"
+        android:textColor="@color/orche_muted"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnScanTagBra"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:text="Tag: Bra 34B"
+            android:textAllCaps="false"
+            android:textSize="11sp"
+            android:textColor="@color/orche_plum"
+            app:backgroundTint="@color/orche_rose_card"
+            app:cornerRadius="8dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnScanTagBrief"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:text="Tag: Brief M"
+            android:textAllCaps="false"
+            android:textSize="11sp"
+            android:textColor="@color/orche_plum"
+            app:backgroundTint="@color/orche_rose_card"
+            app:cornerRadius="8dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp" />
+    </LinearLayout>
+
+    <!-- Scan Results Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardScanResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/orche_border"
+        app:strokeWidth="1dp"
+        app:cardBackgroundColor="@color/orche_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/txtScannedItemTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_product_name"
+                android:text="Soft Form Everyday Bra · 34B"
+                android:textColor="@color/orche_charcoal"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtScannedLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="📍 Rack 4 (Bandra Boutique) · 4 items available"
+                android:textColor="@color/orche_success"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <!-- Action 1: Send to Fitting Room -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSendScannedToRoom"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/font_cormorant"
+                android:text="Send to Fitting Room #3"
+                android:textAllCaps="false"
+                android:textColor="@color/orche_white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/orche_plum"
+                app:cornerRadius="10dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp" />
+
+            <!-- Action 2: Express Bag Add -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnExpressBuyScanned"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/font_cormorant"
+                android:text="Add to Bag (Store Pickup)"
+                android:textAllCaps="false"
+                android:textColor="@color/orche_plum"
+                android:textSize="13sp"
+                app:backgroundTint="@color/orche_rose_card"
+                app:cornerRadius="10dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

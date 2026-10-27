@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_cormorant"
+                android:text="Filter &amp; Sort"
+                android:textColor="@color/orche_plum"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnCloseFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="4dp"
+                android:text="✕"
+                android:textColor="@color/orche_muted"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:focusable="true" />
+        </RelativeLayout>
+
+        <!-- Sort By Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="SORT BY"
+            android:textColor="@color/orche_plum"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupSort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/sortRecommended"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Featured &amp; Recommended"
+                android:textColor="@color/orche_charcoal"
+                android:textSize="13sp"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/sortPriceLowHigh"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Price: Low to High"
+                android:textColor="@color/orche_charcoal"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/sortPriceHighLow"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Price: High to Low"
+                android:textColor="@color/orche_charcoal"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/sortRating"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Customer Rating (4.5★ &amp; up)"
+                android:textColor="@color/orche_charcoal"
+                android:textSize="13sp" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/orche_border" />
+
+        <!-- Filter by Size -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="FILTER BY SIZE"
+            android:textColor="@color/orche_plum"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/filterSize30B"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_chip_unselected"
+                android:gravity="center"
+                android:text="30B"
+                android:textSize="12sp"
+                android:textColor="@color/orche_charcoal"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/filterSize32B"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_chip_unselected"
+                android:gravity="center"
+                android:text="32B"
+                android:textSize="12sp"
+                android:textColor="@color/orche_charcoal"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/filterSize34B"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_chip_selected"
+                android:gravity="center"
+                android:text="34B"
+                android:textSize="12sp"
+                android:textColor="@color/orche_white"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/filterSize36B"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_chip_unselected"
+                android:gravity="center"
+                android:text="36B"
+                android:textSize="12sp"
+                android:textColor="@color/orche_charcoal"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="14dp"
+            android:background="@color/orche_border" />
+
+        <!-- Filter by Price Range -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="PRICE RANGE"
+            android:textColor="@color/orche_plum"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/chipPriceAll"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_chip_selected"
+                android:gravity="center"
+                android:text="All"
+                android:textSize="11sp"
+                android:textColor="@color/orche_white"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/chipPriceUnder1000"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/bg_chip_unselected"
+                android:gravity="center"
+                android:text="&lt; ₹1,000"
+                android:textSize="11sp"
+                android:textColor="@color/orche_charcoal"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/chipPriceAbove1000"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_chip_unselected"
+                android:gravity="center"
+                android:text="₹1,000+"
+                android:textSize="11sp"
+                android:textColor="@color/orche_charcoal"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- Actions: Reset & Apply -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="22dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnResetFilters"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/font_cormorant"
+                android:text="Reset"
+                android:textAllCaps="false"
+                android:textColor="@color/orche_plum"
+                android:textSize="14sp"
+                app:backgroundTint="@color/orche_rose_card"
+                app:cornerRadius="12dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnApplyFilters"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_marginStart="6dp"
+                android:fontFamily="@font/font_cormorant"
+                android:text="Apply Filters"
+                android:textAllCaps="false"
+                android:textColor="@color/orche_white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/orche_plum"
+                app:cornerRadius="12dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

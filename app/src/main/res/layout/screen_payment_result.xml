@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/orche_ivory"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <!-- Payment Failure Card State -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardPaymentFailed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/orche_white"
+        app:strokeColor="@color/orche_border"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/txtPaymentResultIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✕"
+                android:textColor="#D32F2F"
+                android:textSize="44sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPaymentResultTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/font_cormorant"
+                android:text="Payment Was Not Completed"
+                android:textColor="@color/orche_plum"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/txtPaymentResultReason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Your bank declined the transaction or timed out. Don't worry, your bag is saved and no funds were deducted."
+                android:textColor="@color/orche_muted"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:lineSpacingExtra="3dp" />
+
+            <TextView
+                android:id="@+id/txtPaymentAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/font_cormorant"
+                android:text="Amount Due: ₹1,758"
+                android:textColor="@color/orche_charcoal"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Safe Retry Path Actions -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRetryPayment"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/font_cormorant"
+                android:text="Retry Payment Safely"
+                android:textAllCaps="false"
+                android:textColor="@color/orche_white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/orche_plum"
+                app:cornerRadius="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnChooseAlternateMethod"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/font_cormorant"
+                android:text="Choose Alternate Method / COD"
+                android:textAllCaps="false"
+                android:textColor="@color/orche_plum"
+                android:textSize="14sp"
+                app:backgroundTint="@color/orche_rose_card"
+                app:cornerRadius="12dp" />
+
+            <TextView
+                android:id="@+id/btnCancelReturnToBag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/font_cormorant"
+                android:text="Return to Shopping Bag"
+                android:textColor="@color/orche_muted"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

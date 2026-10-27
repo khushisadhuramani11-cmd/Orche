@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orche_ivory">
+
+    <!-- Center Luxury Branding Container -->
+    <LinearLayout
+        android:id="@+id/splashCenterContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Pretty Full Logo Artwork (Woman in Arch + Orche' + Motif) -->
+        <ImageView
+            android:id="@+id/splashLogoImage"
+            android:layout_width="250dp"
+            android:layout_height="318dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/logo_orche_full_crop"
+            android:contentDescription="Orche' Luxury Intimates Logo" />
+
+        <!-- Luxury Subtitle -->
+        <TextView
+            android:id="@+id/splashSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/font_cormorant"
+            android:text="INTIMATES, MADE PERSONAL"
+            android:textColor="@color/orche_plum_light"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.22" />
+
+        <!-- Delicate Divider -->
+        <View
+            android:layout_width="48dp"
+            android:layout_height="1.5dp"
+            android:layout_marginTop="14dp"
+            android:background="@color/orche_rose_accent" />
+    </LinearLayout>
+
+    <!-- Bottom Luxury Tagline -->
+    <LinearLayout
+        android:id="@+id/splashFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_cormorant"
+            android:text="Feel good in your own way."
+            android:textColor="@color/orche_charcoal"
+            android:textSize="17sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/font_cormorant"
+            android:text="Everyday comfort · Thoughtful fit"
+            android:textColor="@color/orche_muted"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</RelativeLayout>

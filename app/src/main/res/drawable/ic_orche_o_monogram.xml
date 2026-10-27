@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Rounded card background -->
+    <path
+        android:fillColor="#F6DCE2"
+        android:pathData="M16,0h88a16,16 0 0,1 16,16v88a16,16 0 0,1 -16,16h-88a16,16 0 0,1 -16,-16v-88a16,16 0 0,1 16,-16z"/>
+    <!-- Elegant Serif 'O' Monogram -->
+    <path
+        android:fillColor="#C48493"
+        android:pathData="M60,26c-17.67,0 -32,15.22 -32,34s14.33,34 32,34 32,-15.22 32,-34 -14.33,-34 -32,-34zm0,54c-9.94,0 -18,-8.95 -18,-20s8.06,-20 18,-20 18,8.95 18,20 -8.06,20 -18,20z"/>
+</vector>

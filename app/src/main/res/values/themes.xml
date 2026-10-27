@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Orche" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Brand Colors -->
+        <item name="colorPrimary">@color/orche_plum</item>
+        <item name="colorSecondary">@color/orche_gold</item>
+        <item name="android:statusBarColor">@color/orche_ivory</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Default App Typography: Cormorant Garamond for all texts, actions, and buttons -->
+        <item name="fontFamily">@font/font_cormorant</item>
+        <item name="android:fontFamily">@font/font_cormorant</item>
+    </style>
+
+    <style name="Theme.Orche" parent="Base.Theme.Orche" />
+</resources>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_cormorant"
+                android:text="Share Your Fit Review"
+                android:textColor="@color/orche_plum"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnCloseWriteReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="4dp"
+                android:text="✕"
+                android:textColor="@color/orche_muted"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:focusable="true" />
+        </RelativeLayout>
+
+        <!-- Rating selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="OVERALL RATING"
+            android:textColor="@color/orche_plum"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtStarSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="★★★★★ (5 / 5)"
+            android:textColor="@color/orche_gold"
+            android:textSize="22sp" />
+
+        <!-- Fit Feedback -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="HOW DID IT FIT?"
+            android:textColor="@color/orche_plum"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupFitFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioFitSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Runs Small"
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/radioFitTrue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="True to Size"
+                android:textSize="11sp" />
+
+            <RadioButton
+                android:id="@+id/radioFitLarge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Runs Large"
+                android:textSize="11sp" />
+        </RadioGroup>
+
+        <!-- Comment -->
+        <EditText
+            android:id="@+id/editReviewComment"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/card_background"
+            android:hint="Share details on comfort, fabric feel, and band support..."
+            android:gravity="top|start"
+            android:padding="12dp"
+            android:textColor="@color/orche_charcoal"
+            android:textColorHint="@color/orche_muted"
+            android:textSize="13sp" />
+
+        <!-- Media / Camera Photo Upload Button (P2 Requirement) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnAttachReviewPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/orche_border"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="@color/orche_rose_card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_camera"
+                    app:tint="@color/orche_plum" />
+
+                <TextView
+                    android:id="@+id/txtPhotoStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:text="Add Fit Photo (Camera / Media Library)"
+                    android:textColor="@color/orche_plum"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Submit Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmitReview"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/font_cormorant"
+            android:text="Submit Verified Review"
+            android:textAllCaps="false"
+            android:textColor="@color/orche_white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/orche_plum"
+            app:cornerRadius="12dp" />
+
+    </LinearLayout>
+</ScrollView>

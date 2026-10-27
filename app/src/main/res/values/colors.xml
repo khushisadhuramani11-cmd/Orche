@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="orche_ivory">#FAF5F1</color>
+    <color name="orche_plum">#54253B</color>
+    <color name="orche_plum_light">#70405A</color>
+    <color name="orche_charcoal">#221C20</color>
+    <color name="orche_muted">#8B8086</color>
+    <color name="orche_white">#FFFFFF</color>
+    <color name="orche_border">#EAE0E5</color>
+    <color name="orche_rose_light">#F8E8EF</color>
+    <color name="orche_rose_card">#F6DCE2</color>
+    <color name="orche_rose_accent">#D892A2</color>
+    <color name="orche_success">#2E7D5B</color>
+    <color name="orche_gold">#C99700</color>
+    
+    <!-- Color Swatches -->
+    <color name="swatch_rose_nude">#D892A2</color>
+    <color name="swatch_silk_ivory">#F5ECE5</color>
+    <color name="swatch_deep_plum">#54253B</color>
+    <color name="swatch_mocha">#7F5E5D</color>
+</resources>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/card_background"
+    android:padding="22dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/logo_orche_badge"
+                android:contentDescription="Orche' Logo" />
+
+            <TextView
+                android:id="@+id/authTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_cormorant"
+                android:text="Welcome to Orche'"
+                android:textColor="@color/orche_plum"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnCloseAuth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="4dp"
+            android:text="✕"
+            android:textColor="@color/orche_muted"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:focusable="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Sign in for personalized fits, orders &amp; boutique rewards."
+        android:textColor="@color/orche_muted"
+        android:textSize="12sp" />
+
+    <!-- Tabs: Login vs Sign Up -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/card_background"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <TextView
+            android:id="@+id/tabLogin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_chip_selected"
+            android:gravity="center"
+            android:text="Sign In"
+            android:textColor="@color/orche_white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tabSignUp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="New Account"
+            android:textColor="@color/orche_plum"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Name input (visible in Sign up) -->
+    <EditText
+        android:id="@+id/editAuthName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/card_background"
+        android:hint="Full Name"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:textColor="@color/orche_charcoal"
+        android:textColorHint="@color/orche_muted"
+        android:textSize="13sp"
+        android:inputType="textPersonName"
+        android:visibility="gone" />
+
+    <!-- Phone / Email input -->
+    <EditText
+        android:id="@+id/editAuthContact"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/card_background"
+        android:hint="Mobile Number or Email"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:textColor="@color/orche_charcoal"
+        android:textColorHint="@color/orche_muted"
+        android:textSize="13sp"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editAuthPassword"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/card_background"
+        android:hint="Password or 4-digit PIN"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:textColor="@color/orche_charcoal"
+        android:textColorHint="@color/orche_muted"
+        android:textSize="13sp"
+        android:inputType="textPassword" />
+
+    <!-- Primary Action Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmitAuth"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/font_cormorant"
+        android:text="Sign In to Orche'"
+        android:textAllCaps="false"
+        android:textColor="@color/orche_white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/orche_plum"
+        app:cornerRadius="12dp" />
+
+    <!-- Guest Checkout Option (P0 Requirement) -->
+    <TextView
+        android:id="@+id/btnContinueAsGuest"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:fontFamily="@font/font_cormorant"
+        android:text="Continue as Guest (No account needed)"
+        android:textColor="@color/orche_plum"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:text="Discreet account privacy · Zero spam guaranteed"
+        android:textColor="@color/orche_muted"
+        android:textSize="11sp" />
+
+</LinearLayout>
